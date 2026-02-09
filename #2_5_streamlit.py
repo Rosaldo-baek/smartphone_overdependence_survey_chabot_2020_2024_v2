@@ -262,8 +262,8 @@ def init_resources():
         llms = {
             "router": ChatOpenAI(model="gpt-4o-mini", temperature=0, max_tokens=50),
             "casual": ChatOpenAI(model="gpt-4o-mini", temperature=0.5, max_tokens=500),
-            "main": ChatOpenAI(model="gpt-4o", temperature=0.2, max_tokens=4000),
-            "planner": ChatOpenAI(model="gpt-4o", temperature=0, max_tokens=1000),
+            "main": ChatOpenAI(model="gpt-4o-mini", temperature=0.2, max_tokens=4000),
+            "planner": ChatOpenAI(model="gpt-4o-mini", temperature=0, max_tokens=1000),
             "rewrite": ChatOpenAI(model="gpt-4o-mini", temperature=0, max_tokens=500),
         }
         
@@ -1544,5 +1544,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
