@@ -133,7 +133,7 @@ BOT_IDENTITY = """2020~2024년 스마트폰 과의존 실태조사 보고서 분
 """
 
 # Hugging Face 설정
-HF_REPO_ID = "Rosaldowithbaek/smartphone-addiction-chroma-db"
+HF_REPO_ID = "smartphoe_overdependence_survey_chromadb"
 LOCAL_DB_PATH = "./chroma_db_store"
 
 # 검색 파라미터 (기본값 / 재시도용)
@@ -1544,6 +1544,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
