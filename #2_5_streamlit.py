@@ -225,11 +225,13 @@ def download_chroma_db():
     
     try:
         from huggingface_hub import snapshot_download
+        hf_token = st.secrets.get("HF_TOKEN", None)
         downloaded_path = snapshot_download(
             repo_id=HF_REPO_ID,
             repo_type="dataset",
             local_dir=LOCAL_DB_PATH,
-            local_dir_use_symlinks=False
+            local_dir_use_symlinks=False,
+            token=hf_token
         )
         return downloaded_path, None
     except Exception as e:
@@ -1544,6 +1546,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
